@@ -17,8 +17,8 @@
   <div id="container">
 
     <ion-list>
-      <ion-item *ngFor="let ubi of servicio.listaUbicaciones">
-        <ion-label>{{ubi.nombre_residencia}}</ion-label>
+      <ion-item *ngFor="let estancia of servicio.listaEstancias">
+        <ion-label>{{estancia.nombre_estancia}}</ion-label>
       </ion-item>
       
     </ion-list>
@@ -35,10 +35,10 @@
           </ion-toolbar>
           <ion-list class="creaubicacion">
             <ion-item class="campo">
-              <ion-input aria-label="Email" placeholder="Nombre de la ubicación" [(ngModel)]="nombreUbicacion"></ion-input>
+              <ion-input aria-label="Email" placeholder="Nombre de la ubicación"></ion-input>
             </ion-item>
             <ion-buttons >
-              <ion-button  color="secondary" (click)="modal.dismiss()" (click)="crearUbicacion(nombreUbicacion)">Guardar</ion-button>
+              <ion-button  color="secondary" (click)="modal.dismiss()">Guardar</ion-button>
             </ion-buttons>
           </ion-list>
         </ion-content>

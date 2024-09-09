@@ -5,6 +5,7 @@ import { IonContent, IonHeader, IonTitle, IonToolbar, IonButtons, IonMenuButton,
 import { addIcons } from 'ionicons';
 import { add } from 'ionicons/icons';
 import { IStockCasa } from 'src/app/interfaces/i-stock-casa';
+import { GestionStockService } from 'src/app/services/gestion-stock.service';
 
 @Component({
   selector: 'app-residencias',
@@ -16,14 +17,20 @@ import { IStockCasa } from 'src/app/interfaces/i-stock-casa';
 export class ResidenciasPage implements OnInit {
 
 
-  listaUbicaciones : IStockCasa[] = [];
-  nombreUbicación : string = "";
   
-  constructor() {
+  nombreUbicacion : string = "";
+
+
+  constructor(public servicio : GestionStockService) {
     addIcons({ add });
    }
 
+   
   ngOnInit() {
   }
 
+  public crearUbicacion(nombreUbicacion : string){
+    this.servicio.addUbicacion(nombreUbicacion);
+    this.nombreUbicacion="";
+  }
 }
