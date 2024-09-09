@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonButtons, IonMenuButton, IonFab, IonFabButton, IonIcon, IonModal, IonButton, IonList, IonItem, IonAvatar, IonImg, IonLabel, IonInput } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import { add } from 'ionicons/icons';
+import { IStockCasa } from 'src/app/interfaces/i-stock-casa';
 
 @Component({
   selector: 'app-residencias',
@@ -14,6 +15,10 @@ import { add } from 'ionicons/icons';
 })
 export class ResidenciasPage implements OnInit {
 
+
+  listaUbicaciones : IStockCasa[] = [];
+  nombreUbicación : string = "";
+  
   constructor() {
     addIcons({ add });
    }
