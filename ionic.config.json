@@ -1,0 +1,7 @@
+{
+  "name": "stockcasa",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
